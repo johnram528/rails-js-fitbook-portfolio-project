@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 gem 'pry'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'active_model_serializers'
 
 
 # Use ActiveModel has_secure_password
