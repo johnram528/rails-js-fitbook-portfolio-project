@@ -1,0 +1,4 @@
+<%=render partial: 'exercise', locals: {exercise: @exercise}%>
+<% @exercise.routines.each do |routine|%>
+  <%= link_to routine.name, routine_path(routine)%>
+<% end %>

@@ -1,0 +1,8 @@
+<h2><%=link_to exercise.name.pluralize.capitalize, exercise_path(exercise)%></h2>
+  <ul>
+    <li>Reps: <%=exercise.routine_exercises.last.reps%></li>
+    <li>Instructions: <%=exercise.instructions%></li>
+    <li>Estimated Time: <%=show_estimated_time(exercise)%></li>
+    <li>Target Muscles: <%=exercise.muscles%></li>
+  </ul>
+

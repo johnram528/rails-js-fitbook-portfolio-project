@@ -1,0 +1,25 @@
+
+<%= form_for @routine do |f|%>
+  <%= render partial: 'layouts/error_messages', locals: {object: f.object} %>
+  <%= f.label :name, "Workout Name" %>
+  <%= f.text_field :name %><br><br>
+  <%= f.fields_for :exercises do |exercise| %>
+    <%= render 'layouts/error_messages', object: f.object %>
+
+    <div>
+      <%= exercise.label :name, "Exercise"%>
+      <%= exercise.text_field :name%><br>
+      <%= exercise.label :instructions %>
+      <%= exercise.text_area :instructions %><br>
+      <%= exercise.label :muscles, "Target Muscles"%>
+      <%= exercise.text_field :muscles%><br>
+      <%= exercise.label :rep_time, "Estimated time per rep(in seconds)"%>
+      <%= exercise.number_field :rep_time, min: 1%><br><br>
+      <%= exercise.label :reps %>
+      <%= exercise.number_field :reps, min: 1 %>
+    </div>
+    <br><br><br> 
+   
+  <% end %>
+  <%= f.submit %>
+<%end%>
