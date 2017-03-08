@@ -34,7 +34,7 @@ class RoutinesController < ApplicationController
   def show
     respond_to do |format|
       format.html {render :show}
-      format.json {render json: @routine.to_json}
+      format.json {render json: @routine}
     end
   end
 
