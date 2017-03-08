@@ -1,6 +1,6 @@
 <%if user_signed_in? %>
-  <%= link_to "Home", root_path, id: "root_link" %> |
-  <%= link_to "My Workouts", user_routines_path(current_user), id: "user_routines_link" %> |
+  <%= link_to "Home", root_path, id: "root_link", :'data-id' => "#{current_user.id}"%>|
+  <%= link_to "My Workouts", user_routines_path(current_user), id:"user_routines_link" %> |
   <%= link_to "Browse Workouts", routines_path, id: "routines_link"%> |
   <%= link_to "New Workout", new_routine_path, id: "new_routine_link"%> |
   <%= link_to "My Profile", user_path(current_user), id: "profile_link"%> |
@@ -10,6 +10,10 @@
   <%= link_to "Sign In", new_user_session_path %> |
   <%= link_to "Sign Up", new_user_registration_path %> 
 <%end%><br><br>
+
+
+
+
 
 
 
