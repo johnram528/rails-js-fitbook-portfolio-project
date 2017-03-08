@@ -23,3 +23,26 @@
   <% end %>
   <%= f.submit %>
 <%end%>
+
+<script id="new-routine-template" type="text/x-handlebars-template">
+  <div class="new_routine">
+    <h1>{{name}}</h1> 
+    <p>TARGET: <%=@routine.muscles%></p>
+    {{#exercises exercise}}
+      {{exercisePartial}}
+    {{/exercise}} 
+    <p>Total Estimated Workout Time: <%=show_estimated_time(routine)%></p>
+  </div>
+</script>
+
+<script id="exercise-partial" type="text/x-handlebars-template">
+  <div class="new_exercise"> 
+    <h2>{{name}}</h2>
+  <ul>
+    <li>Reps: {{routine_exercises.reps}}</li>
+    <li>Instructions: {{instructions}}</li>
+    <li>Estimated Time: {{rep_time}} * {{routine_exercises.reps}}</li>
+    <li>Target Muscles: {{muscles}}</li>
+  </ul>
+  </div>
+</script>
