@@ -8220,3 +8220,264 @@ Processing by RoutinesController#create as JSON
   [1m[35m (2.2ms)[0m  commit transaction
 [active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
 Completed 201 Created in 32ms (Views: 1.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 04:04:24 -0500
+Processing by RoutinesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (20.1ms)
+  Rendered routines/new.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 04:04:25 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-08 04:04:37 -0500
+Processing by RoutinesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hOn2OmYXqHq/yAXInxeIyFhCkMb0/bqeZCu0bXf8hEberTNyRKj+ddzHJY+DLgKTpuvTQzCn05T/zJpU7Vq4Ew==", "routine"=>{"name"=>"Stamina", "exercises_attributes"=>{"0"=>{"name"=>"dsfs", "instructions"=>"dsgsd", "muscles"=>"sgdg", "rep_time"=>"3", "reps"=>"3"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Stamina"], ["created_at", "2017-03-08 09:04:37.088476"], ["updated_at", "2017-03-08 09:04:37.088476"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "dsfs"], ["instructions", "dsgsd"], ["rep_time", 3], ["muscles", "sgdg"], ["created_at", "2017-03-08 09:04:37.089531"], ["updated_at", "2017-03-08 09:04:37.089531"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["routine_id", 25], ["exercise_id", 31], ["created_at", "2017-03-08 09:04:37.091019"], ["updated_at", "2017-03-08 09:04:37.091019"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  [["exercise_id", 31]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?  [["reps", 3], ["updated_at", "2017-03-08 09:04:37.101473"], ["id", 31]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["user_id", 1], ["updated_at", "2017-03-08 09:04:37.106791"], ["id", 25]]
+  [1m[35m (2.3ms)[0m  commit transaction
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 201 Created in 29ms (Views: 1.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 04:12:27 -0500
+Processing by RoutinesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (19.6ms)
+  Rendered routines/new.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 04:12:27 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-08 04:12:46 -0500
+Processing by RoutinesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"07W+bZ6scsW6qWDVZTcMKZnZDgsdAwuQm1B7oPG4c5aJ8XslvBMkytmmQJJ5DoZyZ3BNjtlZYpoAt1WZax5Pww==", "routine"=>{"name"=>"test", "exercises_attributes"=>{"0"=>{"name"=>"ds", "instructions"=>"JLJ", "muscles"=>"legs", "rep_time"=>"4", "reps"=>"9"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "test"], ["created_at", "2017-03-08 09:12:46.405207"], ["updated_at", "2017-03-08 09:12:46.405207"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ds"], ["instructions", "JLJ"], ["rep_time", 4], ["muscles", "legs"], ["created_at", "2017-03-08 09:12:46.408968"], ["updated_at", "2017-03-08 09:12:46.408968"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["routine_id", 26], ["exercise_id", 32], ["created_at", "2017-03-08 09:12:46.412216"], ["updated_at", "2017-03-08 09:12:46.412216"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  [["exercise_id", 32]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?  [["reps", 9], ["updated_at", "2017-03-08 09:12:46.423513"], ["id", 32]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["user_id", 1], ["updated_at", "2017-03-08 09:12:46.430186"], ["id", 26]]
+  [1m[35m (2.4ms)[0m  commit transaction
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (1.32ms)
+Completed 201 Created in 36ms (Views: 1.8ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 04:13:38 -0500
+Processing by RoutinesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (13.5ms)
+  Rendered routines/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 04:13:38 -0500
+
+
+Started GET "/routines/1.json" for ::1 at 2017-03-08 12:01:18 -0500
+Processing by RoutinesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.3ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mExercise Exists (3.6ms)[0m  SELECT  1 AS one FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ? LIMIT 1  [["routine_id", 1]]
+[active_model_serializers]   [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.2ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.3ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  [["exercise_id", 2]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 3]]
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (66.6ms)
+Completed 200 OK in 119ms (Views: 72.1ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/routines/1.json" for ::1 at 2017-03-08 12:03:44 -0500
+Processing by RoutinesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (2.3ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mExercise Exists (2.7ms)[0m  [1mSELECT  1 AS one FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ? LIMIT 1[0m  [["routine_id", 1]]
+[active_model_serializers]   [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (2.2ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (67.82ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 11.4ms)
+
+NameError (undefined local variable or method `routine_exercises' for #<ExerciseSerializer:0x007f935b550e88>):
+  app/serializers/exercise_serializer.rb:5:in `reps'
+  app/controllers/routines_controller.rb:40:in `block (2 levels) in show'
+  app/controllers/routines_controller.rb:38:in `show'
+
+
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.6ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.8ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.5ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.5ms)
+
+
+Started GET "/routines/1.json" for ::1 at 2017-03-08 12:05:22 -0500
+Processing by RoutinesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.1ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mExercise Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ? LIMIT 1[0m  [["routine_id", 1]]
+[active_model_serializers]   [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (30.64ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 2.1ms)
+
+NameError (undefined local variable or method `routine_exercises' for #<ExerciseSerializer:0x007f9354a4ee78>):
+  app/serializers/exercise_serializer.rb:5:in `reps'
+  app/controllers/routines_controller.rb:40:in `block (2 levels) in show'
+  app/controllers/routines_controller.rb:38:in `show'
+
+
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.7ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.5ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.0ms)
+
+
+Started GET "/routines/1.json" for ::1 at 2017-03-08 12:05:36 -0500
+Processing by RoutinesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.1ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mExercise Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ? LIMIT 1[0m  [["routine_id", 1]]
+[active_model_serializers]   [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.2ms)[0m  SELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  [["exercise_id", 1]]
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (124922.74ms)
+Completed 500 Internal Server Error in 124939ms (ActiveRecord: 2.1ms)
+
+NameError (undefined local variable or method `routine_exercises' for #<ExerciseSerializer:0x007f935b3af778>):
+  app/serializers/exercise_serializer.rb:6:in `reps'
+  app/controllers/routines_controller.rb:40:in `block (2 levels) in show'
+  app/controllers/routines_controller.rb:38:in `show'
+
+
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.0ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/master/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/routines/1.json" for ::1 at 2017-03-08 12:07:42 -0500
+Processing by RoutinesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.3ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mExercise Exists (0.2ms)[0m  SELECT  1 AS one FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ? LIMIT 1  [["routine_id", 1]]
+[active_model_serializers]   [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.2ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 1]]
+[active_model_serializers]   [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  [["exercise_id", 2]]
+[active_model_serializers]   [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 3]]
+[active_model_serializers] Rendered RoutineSerializer with ActiveModelSerializers::Adapter::Attributes (35.03ms)
+Completed 200 OK in 59ms (Views: 34.7ms | ActiveRecord: 3.2ms)

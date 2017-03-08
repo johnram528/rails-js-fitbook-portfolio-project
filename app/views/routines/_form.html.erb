@@ -32,7 +32,9 @@
         <div class="new_exercise"> 
     <h2>{{name}}</h2>
   <ul>
-    <li>Reps: {{routine_exercises.reps}}</li>
+    {{#each routine_exercises}}
+    <li>Reps: {{reps}}</li>
+    {{/each}}
     <li>Instructions: {{instructions}}</li>
     <li>Estimated Time: {{rep_time}} * {{routine_exercises.reps}}</li>
     <li>Target Muscles: {{muscles}}</li>
