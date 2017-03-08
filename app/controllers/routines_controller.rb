@@ -25,7 +25,10 @@ class RoutinesController < ApplicationController
     end
     if @routine.save
       @user.routines << @routine
-      render json: @routine, status: 201
+      respond_to do |format|
+        format.html { redirect_to routine_path(@routine)}
+        format.json { render json: @routine, status: 201}
+      end
     else
       render 'new'
     end

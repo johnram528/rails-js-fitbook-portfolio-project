@@ -6,8 +6,18 @@ $(function(){
   var action = $form.attr("action")
   var params = $form.serialize()
 
-  $.post(action, params).success(function(json){
-    console.log(json)
+  $.ajax({
+    url: action, 
+    data: params, 
+    dataType: 'json',
+    method: "POST"
+  })
+    .success(function(json){
+
+    
+  })
+  .error(function(response){
+    console.log(response)
   })
   })
 })
