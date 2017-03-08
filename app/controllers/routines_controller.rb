@@ -6,6 +6,10 @@ class RoutinesController < ApplicationController
   def index
     if current_user
       user_routines
+      respond_to do |format|
+        format.html {render :index}
+        format.json {render json: @routines}
+      end
     else
       redirect_to new_user_session_path
     end
