@@ -5,7 +5,7 @@ function Routine(attributes){
 }
 
 Routine.prototype.renderDetails = function (){
-  
+
 }
 
 
@@ -34,3 +34,7 @@ $(function(){
   })
   })
 })
+
+function handleBarsSetup(){
+  Handlebars.registerPartial(exercisePartial, $("#exercise-partial").html())
+}
