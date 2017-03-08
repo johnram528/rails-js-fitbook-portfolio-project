@@ -42,6 +42,26 @@ $(function(){
     console.log(response)
   })
   })
+  $("#user_routines_link").on("click", function(e){
+    e.preventDefault()
+    
+  })
+  $("#routines_link").on("click", function(e){
+    e.preventDefault()
+    
+  })
+  $("#new_routine_link").on("click", function(e){
+    e.preventDefault()
+    
+  }) 
+  $("#profile_link").on("click", function(e){
+    e.preventDefault()
+    
+  })
+  $("#root_link").on("click", function(e){
+    e.preventDefault()
+    
+  })       
 })
 
 function handleBarsSetup(){

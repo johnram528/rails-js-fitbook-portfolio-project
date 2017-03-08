@@ -12409,3 +12409,895 @@ Processing by RoutinesController#new as HTML
   Rendered layouts/_navigation.html.erb (0.7ms)
   Rendered routines/_templates.html.erb (0.1ms)
 Completed 200 OK in 111ms (Views: 108.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/routines" for ::1 at 2017-03-08 17:04:34 -0500
+Processing by RoutinesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.2ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  Rendered exercises/_exercise.html.erb (3.0ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 2]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 2]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  Rendered exercises/_exercise.html.erb (3.0ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  Rendered exercises/_exercise.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 5]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 5]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  Rendered exercises/_exercise.html.erb (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 6]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 6]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  Rendered exercises/_exercise.html.erb (3.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 7]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 7]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 13]]
+  Rendered exercises/_exercise.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 8]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 8]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 9]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 9]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 15]]
+  Rendered exercises/_exercise.html.erb (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 10]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 10]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  Rendered exercises/_exercise.html.erb (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 11]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 11]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 17]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 12]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 12]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  [1m[35m (0.4ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 13]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 13]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 19]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 14]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 14]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  [1m[35m (0.2ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 15]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 15]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 21]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 21]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 16]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 16]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  Rendered exercises/_exercise.html.erb (3.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 17]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 17]]
+  [1m[35mRoutineExercise Load (0.5ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 23]]
+  Rendered exercises/_exercise.html.erb (4.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 23]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 18]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 18]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 19]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 19]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 25]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 25]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 20]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 20]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  Rendered exercises/_exercise.html.erb (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 21]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 21]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 27]]
+  Rendered exercises/_exercise.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 27]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 22]]
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 22]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 23]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 23]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 29]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 29]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 24]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 24]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  Rendered exercises/_exercise.html.erb (3.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 25]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 25]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 31]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 31]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 26]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 26]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  [1m[35m (0.2ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 27]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 27]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 33]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 33]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 28]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 28]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 29]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 29]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 35]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 35]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 30]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 30]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 31]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 31]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 37]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 37]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 32]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 32]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 33]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 33]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 39]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 39]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 34]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 34]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 35]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 35]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 41]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 41]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 36]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 36]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 37]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 37]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 43]]
+  Rendered exercises/_exercise.html.erb (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 43]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 38]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 38]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  Rendered routines/_routine.html.erb (273.7ms)
+  Rendered routines/index.html.erb within layouts/application (279.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 357ms (Views: 338.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/routines" for ::1 at 2017-03-08 17:05:12 -0500
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.3ms)[0m  [1mSELECT "routines".* FROM "routines"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  Rendered exercises/_exercise.html.erb (2.8ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 2]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 2]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  Rendered exercises/_exercise.html.erb (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 3]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 3]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 7]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 8]]
+  Rendered exercises/_exercise.html.erb (1.8ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 9]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 4]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 4]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 10]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 5]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 5]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 6]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 6]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 7]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 7]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 13]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 8]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 8]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  Rendered exercises/_exercise.html.erb (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 9]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 9]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 15]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 10]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 10]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 11]]
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 11]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 17]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 12]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 12]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 13]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 13]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 19]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 14]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 14]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 15]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 15]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 21]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 16]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 16]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 17]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 17]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 23]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 23]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 18]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 18]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 19]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 19]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 25]]
+  Rendered exercises/_exercise.html.erb (2.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 20]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 20]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  Rendered exercises/_exercise.html.erb (2.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 21]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 21]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 27]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 22]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 22]]
+  [1m[36mRoutineExercise Load (0.2ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  Rendered exercises/_exercise.html.erb (2.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 28]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 23]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 23]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 29]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 24]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 24]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 25]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 25]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 31]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 26]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 26]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 27]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 27]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 33]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 28]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 28]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 29]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 29]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 35]]
+  Rendered exercises/_exercise.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 30]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 30]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  Rendered exercises/_exercise.html.erb (2.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 31]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 31]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 37]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 32]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 32]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  Rendered exercises/_exercise.html.erb (2.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 33]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 33]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 39]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 34]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 34]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  Rendered exercises/_exercise.html.erb (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 35]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 35]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 41]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 36]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 36]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  Rendered exercises/_exercise.html.erb (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 37]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 37]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 43]]
+  Rendered exercises/_exercise.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 38]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 38]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  Rendered exercises/_exercise.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 44]]
+  Rendered routines/_routine.html.erb (288.6ms)
+  Rendered routines/index.html.erb within layouts/application (294.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 392ms (Views: 377.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-08 17:05:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/_routine.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-08 17:05:55 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/edit.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-08 17:11:47 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 117.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/routines.self-e38eb5532ccfc8192d4c2ad8ee758993f36f97a557e409e8b0eeb39810207536.js?body=1" for ::1 at 2017-03-08 17:11:47 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:11:47 -0500
+
+
+Started GET "/" for ::1 at 2017-03-08 17:13:18 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 99ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/routines.self-d844f4bb34b4b8081677dd4bbdbb3e5d54d8ae967c26049036c4a1666ed21330.js?body=1" for ::1 at 2017-03-08 17:13:18 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:13:18 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 17:13:21 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (16.9ms)
+  Rendered routines/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 17:15:09 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (17.4ms)
+  Rendered routines/new.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 124ms (Views: 119.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-3a517996f5c6143ece5ae0d0f9815a0c257261fd31adff4024539792d76103f9.js?body=1" for ::1 at 2017-03-08 17:15:09 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:15:09 -0500
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-03-08 17:15:27 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4R9LHJCuPH2mWHOr1HezKKenApSv+QVuS2hayQWF/Le7W45UshFqcsVXU+zITjlzWQ5BEWujbGTQj3TwnyPA4g=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-08 17:15:27 -0500
+Processing by UsersController#edit as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-03-08 17:15:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (72.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:15:28 -0500
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-08 17:15:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UKWTWDE+PhmoEuTv7eWXMISY2SjcA4lH9v0Krb90DcggyvDi5CC/vm3kjNV6sFt9ri/YgIMO2hGDM3EUbGIwxA==", "user"=>{"email"=>"test12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "test12@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-03-07 21:56:16.914354"], ["current_sign_in_at", "2017-03-08 22:15:34.586500"], ["sign_in_count", 4], ["updated_at", "2017-03-08 22:15:34.587403"], ["id", 1]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 173ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-08 17:15:34 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered routines/_templates.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:15:34 -0500
+
+
+Started GET "/" for ::1 at 2017-03-08 17:15:58 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/routines.self-a70b862d484f1e095764bfb37577d4d85d6f7ca28830d2b3515e540b86689caa.js?body=1" for ::1 at 2017-03-08 17:15:58 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-08 17:15:58 -0500
