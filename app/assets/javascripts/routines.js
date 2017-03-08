@@ -1,7 +1,9 @@
 function Routine(attributes){
   this.name = attributes.name
   this.estimated_time = attributes.estimated_time
+  this.muscles = attributes.muscles
   this.exercises = attributes.exercises
+  this.user = attributes.user
 }
 
 
@@ -17,7 +19,7 @@ Routine.prototype.renderDetails = function (){
 
 
 $(function(){
-  $("#new_routine").on("submit", function(e){
+  $("form#new_routine").on("submit", function(e){
 
   e.preventDefault()
   var $form = $(this)

@@ -26,9 +26,9 @@
 </div>
 <script id="new-routine-template" type="text/x-handlebars-template">
   <div class="new_routine">
-    <h1><%= link_to "#{routine.name.capitalize} Workout ", routine_path(routine)%></h1> 
-    <p><a href={{url}}>{{email}}</a></p>
-    <p>TARGET: <%=routine.muscles%></p> 
+    <h1>{{name}} Workout</h1> 
+    <p><a href="{{user.url}}">{{user.email}}</a></p>
+    <p>TARGET: {{muscles}}</p> 
     {{#each exercises}}
         <div class="new_exercise"> 
     <h2>{{name}}</h2>
