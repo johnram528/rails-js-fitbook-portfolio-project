@@ -4891,3 +4891,680 @@ Processing by RoutinesController#index as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_navigation.html.erb (0.4ms)
 Completed 200 OK in 108ms (Views: 102.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:23:24 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.3ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered routines/_form.html.erb (35.7ms)
+  Rendered routines/new.html.erb within layouts/application (39.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 200 OK in 240ms (Views: 210.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/routines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2017-03-07 20:23:25 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:25:19 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered routines/_form.html.erb (22.9ms)
+  Rendered routines/new.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 133ms (Views: 128.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-18a5cd51266682b66d962a6d88adb33934c372a6b9889cd1c5d78d4f20b924f2.js?body=1" for ::1 at 2017-03-07 20:25:19 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:25:19 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:26:33 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (13.5ms)
+  Rendered routines/new.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-4554e3c50c3113e90638fe0330f688bd42c5a7311dc7aec6587bf573032219d2.js?body=1" for ::1 at 2017-03-07 20:26:33 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:26:33 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:28:41 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (14.3ms)
+  Rendered routines/new.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-e17da21b3cfb7c84c747647eca7020d796d94b28a89d393f5cc73312037790e1.js?body=1" for ::1 at 2017-03-07 20:28:41 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:28:41 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 20:28:47 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GYNirEs8Gehx3+c158lj8LB/mk47q6TBEMMsURWltKuIsjCk5OmaMLIX9vLpq/UPGi97Py0x5mfpCKI3vCqhw==", "routine"=>{"name"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}, "commit"=>"Create Routine"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_error_messages.html.erb (0.9ms)
+  Rendered routines/_form.html.erb (3.9ms)
+  Rendered routines/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 36.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:28:47 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 20:29:16 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GYNirEs8Gehx3+c158lj8LB/mk47q6TBEMMsURWltKuIsjCk5OmaMLIX9vLpq/UPGi97Py0x5mfpCKI3vCqhw==", "routine"=>{"name"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}, "commit"=>"Create Routine"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_error_messages.html.erb (0.5ms)
+  Rendered routines/_form.html.erb (2.6ms)
+  Rendered routines/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 79.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:29:16 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 20:29:40 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GYNirEs8Gehx3+c158lj8LB/mk47q6TBEMMsURWltKuIsjCk5OmaMLIX9vLpq/UPGi97Py0x5mfpCKI3vCqhw==", "routine"=>{"name"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}, "commit"=>"Create Routine"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_error_messages.html.erb (0.9ms)
+  Rendered routines/_form.html.erb (5.0ms)
+  Rendered routines/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 200 OK in 124ms (Views: 108.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/routines.self-107b2dd1fbfb7467b760214dc4470658176f9b645cd248a9821a2049f42525bd.js?body=1" for ::1 at 2017-03-07 20:29:41 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:29:41 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:34:40 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (16.9ms)
+  Rendered routines/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 122ms (Views: 115.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/routines.self-9a0aeaae1d60ba99cd30678601b6af0883629b4a7f3f9d42e8e1270b786c0859.js?body=1" for ::1 at 2017-03-07 20:34:40 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:34:40 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:40:38 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (15.2ms)
+  Rendered routines/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 114ms (Views: 109.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-b4bbfd1d08cf7461fb9393dcd9b4fc406b426e9a162b59c6dd70c71560d782bb.js?body=1" for ::1 at 2017-03-07 20:40:38 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:40:38 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:40:50 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (16.7ms)
+  Rendered routines/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:40:50 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:41:14 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (15.4ms)
+  Rendered routines/new.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-3a48621345c9437cc524a0741bbae94932bc16f37834b9ac5b04129bd2dd49b5.js?body=1" for ::1 at 2017-03-07 20:41:14 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:41:14 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:42:00 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (15.8ms)
+  Rendered routines/new.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 103.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/routines.self-0988d0697d233f70f88050aaad05bf92717423567d28a969495da951873a8085.js?body=1" for ::1 at 2017-03-07 20:42:00 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:42:00 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:42:31 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (16.0ms)
+  Rendered routines/new.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/routines.self-93273c3d8d0f4b566267fed0416d5afb0893f26bf48caa7786d009999f467763.js?body=1" for ::1 at 2017-03-07 20:42:31 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:42:31 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:43:08 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (16.1ms)
+  Rendered routines/new.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 103.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/routines.self-83db5fe41ae56b7b82d280fbecbc2eb9a7e388c3f1bdc0aa7c948f84cae0e8c1.js?body=1" for ::1 at 2017-03-07 20:43:08 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:43:08 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:43:24 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered routines/_form.html.erb (21.1ms)
+  Rendered routines/new.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 194ms (Views: 188.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/routines.self-490c8fa99d422f9bd36fa347ee694360da5f7976fca579bba2efa0aa7c7d11e5.js?body=1" for ::1 at 2017-03-07 20:43:24 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:43:24 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 20:44:03 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (12.5ms)
+  Rendered routines/new.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 93ms (Views: 88.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/routines.self-e26d7c3e9366e0815c23df4056e96af0925b5da8573af22f9a2c2a39fa886023.js?body=1" for ::1 at 2017-03-07 20:44:04 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 20:44:04 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 21:56:15 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.3ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered routines/_form.html.erb (32.1ms)
+  Rendered routines/new.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 280ms (Views: 246.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/routines.self-cd47e52e697d87752adb702455a574f92ce1b1daed5a8d967c8ec49ac877a1cc.js?body=1" for ::1 at 2017-03-07 21:56:15 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 21:56:15 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 21:56:39 -0500
+Processing by RoutinesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cnitFzqE+GKbHGzMGc0VEXEbqZYiqJz6h4gi5glecWgoPGhfGDuubfgTTIsF9J9Kj7LqE+by9fAcbwzfk/hNPQ==", "routine"=>{"name"=>"Test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"test", "muscles"=>"test", "rep_time"=>"3", "reps"=>"3"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test"], ["created_at", "2017-03-08 02:56:39.810864"], ["updated_at", "2017-03-08 02:56:39.810864"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "test"], ["rep_time", 3], ["muscles", "test"], ["created_at", "2017-03-08 02:56:39.817376"], ["updated_at", "2017-03-08 02:56:39.817376"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 5], ["exercise_id", 11], ["created_at", "2017-03-08 02:56:39.821186"], ["updated_at", "2017-03-08 02:56:39.821186"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.2ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 3], ["updated_at", "2017-03-08 02:56:39.832759"], ["id", 11]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 02:56:39.839291"], ["id", 5]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mRoutine Load (0.2ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ?  ORDER BY "routines"."id" DESC LIMIT 1  [["user_id", 1]]
+Redirected to http://localhost:3000/routines/5
+Completed 200 OK in 43ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/routines/5" for ::1 at 2017-03-07 21:56:39 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.1ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 5]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 5]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  Rendered exercises/_exercise.html.erb (4.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  Rendered routines/_routine.html.erb (13.1ms)
+  Rendered routines/show.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/routines" for ::1 at 2017-03-07 21:59:29 -0500
+Processing by RoutinesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.3ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  Rendered exercises/_exercise.html.erb (4.4ms)
+  [1m[35mRoutineExercise Load (0.3ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  Rendered exercises/_exercise.html.erb (7.0ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  Rendered exercises/_exercise.html.erb (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 2]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 2]]
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  Rendered exercises/_exercise.html.erb (1.9ms)
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mRoutineExercise Load (0.1ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  Rendered exercises/_exercise.html.erb (4.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 5]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 5]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  Rendered exercises/_exercise.html.erb (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 11]]
+  Rendered routines/_routine.html.erb (54.2ms)
+  Rendered routines/index.html.erb within layouts/application (59.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 98.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 21:59:32 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.2ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (24.8ms)
+  Rendered routines/new.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/routines" for ::1 at 2017-03-07 21:59:46 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9qc5Y00T/eG5W0bQgcF0QDzYgbTIOgNrC558ixTwNKdnlmtr4sZ+OXqTVxePo+K/lohgxd6gQc3yVfLtvX8hw==", "routine"=>{"name"=>"Test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"test", "muscles"=>"test", "rep_time"=>"2", "reps"=>"2"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}, "commit"=>"Create Routine"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test"], ["created_at", "2017-03-08 02:59:46.045425"], ["updated_at", "2017-03-08 02:59:46.045425"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "test"], ["rep_time", 2], ["muscles", "test"], ["created_at", "2017-03-08 02:59:46.046408"], ["updated_at", "2017-03-08 02:59:46.046408"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 6], ["exercise_id", 12], ["created_at", "2017-03-08 02:59:46.048202"], ["updated_at", "2017-03-08 02:59:46.048202"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 12]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 2], ["updated_at", "2017-03-08 02:59:46.056683"], ["id", 12]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 02:59:46.062588"], ["id", 6]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mRoutine Load (0.2ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ?  ORDER BY "routines"."id" DESC LIMIT 1  [["user_id", 1]]
+Redirected to http://localhost:3000/routines/6
+Completed 302 Found in 27ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/routines/6" for ::1 at 2017-03-07 21:59:46 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.1ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "exercises"."muscles" FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?[0m  [["routine_id", 6]]
+  [1m[35mExercise Load (0.1ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "routine_exercises" ON "exercises"."id" = "routine_exercises"."exercise_id" WHERE "routine_exercises"."routine_id" = ?  [["routine_id", 6]]
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  Rendered exercises/_exercise.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1  [["exercise_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?  ORDER BY "routine_exercises"."id" DESC LIMIT 1[0m  [["exercise_id", 12]]
+  Rendered routines/_routine.html.erb (8.7ms)
+  Rendered routines/show.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 21:59:46 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 21:59:57 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 22:03:45 -0500
+Processing by RoutinesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Yyeo0wT7pPX7hZdTLA5IOvXVkzeJwY1IMxY3C7g2DS3yFvrbqy4nLThNhpQibN7FX4VyRp9bz+7K3bltEbkYQ==", "routine"=>{"name"=>"Test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"test", "muscles"=>"test", "rep_time"=>"2", "reps"=>"2"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test"], ["created_at", "2017-03-08 03:03:45.589472"], ["updated_at", "2017-03-08 03:03:45.589472"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "test"], ["rep_time", 2], ["muscles", "test"], ["created_at", "2017-03-08 03:03:45.590797"], ["updated_at", "2017-03-08 03:03:45.590797"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 7], ["exercise_id", 13], ["created_at", "2017-03-08 03:03:45.596072"], ["updated_at", "2017-03-08 03:03:45.596072"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.2ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 2], ["updated_at", "2017-03-08 03:03:45.607214"], ["id", 13]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 03:03:45.614836"], ["id", 7]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Routine (0.43ms)
+Completed 201 Created in 104ms (Views: 29.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 22:04:28 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (20.0ms)
+  Rendered routines/new.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 81.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 22:04:28 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 22:04:48 -0500
+Processing by RoutinesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esMdAh51Lr6QieCcutwCFeTDYamTrbKWr/87VWLQFUcgh9hKPMp4sfOGwNum5YhOGmoiLFf325w0GBVs+HYpEg==", "routine"=>{"name"=>"test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"test", "muscles"=>"test", "rep_time"=>"3", "reps"=>"3"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2017-03-08 03:04:48.893946"], ["updated_at", "2017-03-08 03:04:48.893946"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "test"], ["rep_time", 3], ["muscles", "test"], ["created_at", "2017-03-08 03:04:48.897705"], ["updated_at", "2017-03-08 03:04:48.897705"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 8], ["exercise_id", 14], ["created_at", "2017-03-08 03:04:48.899747"], ["updated_at", "2017-03-08 03:04:48.899747"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 14]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 3], ["updated_at", "2017-03-08 03:04:48.910298"], ["id", 14]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 03:04:48.916308"], ["id", 8]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Routine (0.41ms)
+Completed 201 Created in 33ms (Views: 1.4ms | ActiveRecord: 11.6ms)

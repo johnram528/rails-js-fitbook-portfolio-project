@@ -25,7 +25,7 @@ class RoutinesController < ApplicationController
     end
     if @routine.save
       @user.routines << @routine
-      redirect_to routine_path(@user.routines.last)
+      render json: @routine, status: 201
     else
       render 'new'
     end
