@@ -12391,3 +12391,21 @@ Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/assets/bootstrap" for ::1 at 2017-03-08 16:50:10 -0500
+
+
+Started GET "/routines/new" for ::1 at 2017-03-08 16:55:21 -0500
+Processing by RoutinesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered routines/_form.html.erb (27.7ms)
+  Rendered routines/new.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered routines/_templates.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 108.6ms | ActiveRecord: 0.1ms)
