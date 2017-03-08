@@ -4,6 +4,9 @@
 4. translate json response to javascript model objects. at least one object added by  prototype
 
 STEPS
--add navbar selectors
+-add navbar selectors #DONE
+-add handlebars to layout page
 -add routine show page selectors
 -serialize models
+  -add has many to routine serializer
+-add handlebars template
