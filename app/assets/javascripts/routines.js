@@ -6,6 +6,8 @@ $(function(){
   var action = $form.attr("action")
   var params = $form.serialize()
 
-  $.post(action, params)
+  $.post(action, params).success(function(json){
+    console.log(json)
+  })
   })
 })

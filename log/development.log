@@ -5568,3 +5568,88 @@ Processing by RoutinesController#create as */*
   [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Routine (0.41ms)
 Completed 201 Created in 33ms (Views: 1.4ms | ActiveRecord: 11.6ms)
+
+
+Started POST "/routines" for ::1 at 2017-03-07 22:12:22 -0500
+Processing by RoutinesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esMdAh51Lr6QieCcutwCFeTDYamTrbKWr/87VWLQFUcgh9hKPMp4sfOGwNum5YhOGmoiLFf325w0GBVs+HYpEg==", "routine"=>{"name"=>"test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"test", "muscles"=>"test", "rep_time"=>"3", "reps"=>"3"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2017-03-08 03:12:22.887215"], ["updated_at", "2017-03-08 03:12:22.887215"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "test"], ["rep_time", 3], ["muscles", "test"], ["created_at", "2017-03-08 03:12:22.888460"], ["updated_at", "2017-03-08 03:12:22.888460"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 9], ["exercise_id", 15], ["created_at", "2017-03-08 03:12:22.892837"], ["updated_at", "2017-03-08 03:12:22.892837"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.1ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 15]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 3], ["updated_at", "2017-03-08 03:12:22.905852"], ["id", 15]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 03:12:22.913745"], ["id", 9]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Routine (0.39ms)
+Completed 201 Created in 84ms (Views: 8.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/routines/new" for ::1 at 2017-03-07 22:12:29 -0500
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_error_messages.html.erb (0.3ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.0ms)
+  Rendered layouts/_error_messages.html.erb (0.1ms)
+  Rendered routines/_form.html.erb (20.5ms)
+  Rendered routines/new.html.erb within layouts/application (24.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 222ms (Views: 209.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/routines.self-e2beaeb0dbeb2ff9a8928d7803fc3778ac245780ea75b7a5fc2ad20b5c83c3c1.js?body=1" for ::1 at 2017-03-07 22:12:29 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2017-03-07 22:12:29 -0500
+
+
+Started POST "/routines" for ::1 at 2017-03-07 22:12:55 -0500
+Processing by RoutinesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J56lgvK/ib+zCaL2zySOgCNfnpP/u+4qZvlBwfGlLul92mDK0ADfsNAGgrHTHQTb3fbdFjvhhyD9Hm/4awMSvA==", "routine"=>{"name"=>"Test", "exercises_attributes"=>{"0"=>{"name"=>"test", "instructions"=>"st", "muscles"=>"s", "rep_time"=>"2", "reps"=>"11"}, "1"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "2"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "3"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}, "4"=>{"name"=>"", "instructions"=>"", "muscles"=>"", "rep_time"=>"", "reps"=>""}}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test"], ["created_at", "2017-03-08 03:12:55.101415"], ["updated_at", "2017-03-08 03:12:55.101415"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "exercises" ("name", "instructions", "rep_time", "muscles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "test"], ["instructions", "st"], ["rep_time", 2], ["muscles", "s"], ["created_at", "2017-03-08 03:12:55.104200"], ["updated_at", "2017-03-08 03:12:55.104200"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "routine_exercises" ("routine_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["routine_id", 10], ["exercise_id", 16], ["created_at", "2017-03-08 03:12:55.108741"], ["updated_at", "2017-03-08 03:12:55.108741"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mRoutineExercise Load (0.2ms)[0m  [1mSELECT "routine_exercises".* FROM "routine_exercises" WHERE "routine_exercises"."exercise_id" = ?[0m  [["exercise_id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "routine_exercises" SET "reps" = ?, "updated_at" = ? WHERE "routine_exercises"."id" = ?[0m  [["reps", 11], ["updated_at", "2017-03-08 03:12:55.126667"], ["id", 16]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "routines" SET "user_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["user_id", 1], ["updated_at", "2017-03-08 03:12:55.136348"], ["id", 10]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Routine (0.42ms)
+Completed 201 Created in 49ms (Views: 1.2ms | ActiveRecord: 13.5ms)
