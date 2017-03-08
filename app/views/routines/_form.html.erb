@@ -24,34 +24,3 @@
     <%= f.submit %>
   <%end%>
 </div>
-<script id="new-routine-template" type="text/x-handlebars-template">
-  <div class="new_routine">
-    <h1>{{name}} Workout</h1> 
-    <p><a href="{{user.url}}">{{user.email}}</a></p>
-    <p>TARGET: {{muscles}}</p> 
-    {{#each exercises}}
-        <div class="new_exercise"> 
-    <h2>{{name}}</h2>
-  <ul>
-    <li>Reps: {{reps}}</li>
-    <li>Instructions: {{instructions}}</li>
-    <li>Estimated Time: {{estimated_time}}</li>
-    <li>Target Muscles: {{muscles}}</li>
-  </ul>
-  </div>
-    {{/each}} 
-     <p>Total Estimated Workout Time: {{estimated_time}}</p>
-  </div>
-</script>
-
-<script id="exercise-partial-template" type="text/x-handlebars-template">
-  <div class="new_exercise"> 
-    <h2>{{name}}</h2>
-  <ul>
-    <li>Reps: {{routine_exercises.reps}}</li>
-    <li>Instructions: {{instructions}}</li>
-    <li>Estimated Time: {{rep_time}} * {{routine_exercises.reps}}</li>
-    <li>Target Muscles: {{muscles}}</li>
-  </ul>
-  </div>
-</script>
