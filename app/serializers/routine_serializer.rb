@@ -1,7 +1,7 @@
 class RoutineSerializer < ActiveModel::Serializer
   include ApplicationHelper
 
-  attributes :id, :name, :estimated_time, :created_by
+  attributes :id, :name, :estimated_time
   has_many :exercises
   belongs_to :user
 
