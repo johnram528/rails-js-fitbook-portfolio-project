@@ -1,3 +1,14 @@
+function Routine(attributes){
+  this.name = attributes.name
+  this.estimated_time = attributes.estimated_time
+  this.exercises = attributes.exercises
+}
+
+Routine.prototype.renderDetails = function (){
+  
+}
+
+
 $(function(){
   $("#new_routine").on("submit", function(e){
 
@@ -14,6 +25,8 @@ $(function(){
   })
     .success(function(json){
 
+    var routine = new Routine(json)
+    var routineDetails = item.renderDetails
     
   })
   .error(function(response){
