@@ -5,8 +5,12 @@
 
 STEPS
 -add navbar selectors #DONE
--add handlebars to layout page
+-add handlebars to layout page #DONE
+-Hijack click event for routine form
 -add routine show page selectors
+  -display_routine div
 -serialize models
   -add has many to routine serializer
--add handlebars template
+-create handlebars templates
+-add handlebar logic to js
+-create add another exercise link/button in new workout
