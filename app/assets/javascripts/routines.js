@@ -4,8 +4,15 @@ function Routine(attributes){
   this.exercises = attributes.exercises
 }
 
-Routine.prototype.renderDetails = function (){
 
+
+$(function(){
+  Routine.templateSource = $("#new-routine-template").html()
+  Routine.template = Handlebars.compile(Routine.templateSource)
+})
+
+Routine.prototype.renderDetails = function (){
+  return Routine.template(this)
 }
 
 
@@ -26,8 +33,8 @@ $(function(){
     .success(function(json){
 
     var routine = new Routine(json)
-    var routineDetails = item.renderDetails
-    
+    var routineDetails = routine.renderDetails()
+    $(".container").html(routineDetails)
   })
   .error(function(response){
     console.log(response)

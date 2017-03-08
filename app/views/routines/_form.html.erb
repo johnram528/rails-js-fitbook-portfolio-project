@@ -1,41 +1,48 @@
+<div class="container">
+  <%= form_for @routine do |f|%>
+    <%= render partial: 'layouts/error_messages', locals: {object: f.object} %>
+    <%= f.label :name, "Workout Name" %>
+    <%= f.text_field :name %><br><br>
+    <%= f.fields_for :exercises do |exercise| %>
+      <%= render 'layouts/error_messages', object: f.object %>
 
-<%= form_for @routine do |f|%>
-  <%= render partial: 'layouts/error_messages', locals: {object: f.object} %>
-  <%= f.label :name, "Workout Name" %>
-  <%= f.text_field :name %><br><br>
-  <%= f.fields_for :exercises do |exercise| %>
-    <%= render 'layouts/error_messages', object: f.object %>
-
-    <div>
-      <%= exercise.label :name, "Exercise"%>
-      <%= exercise.text_field :name%><br>
-      <%= exercise.label :instructions %>
-      <%= exercise.text_area :instructions %><br>
-      <%= exercise.label :muscles, "Target Muscles"%>
-      <%= exercise.text_field :muscles%><br>
-      <%= exercise.label :rep_time, "Estimated time per rep(in seconds)"%>
-      <%= exercise.number_field :rep_time, min: 1%><br><br>
-      <%= exercise.label :reps %>
-      <%= exercise.number_field :reps, min: 1 %>
-    </div>
-    <br><br><br> 
-   
-  <% end %>
-  <%= f.submit %>
-<%end%>
-
+      <div>
+        <%= exercise.label :name, "Exercise"%>
+        <%= exercise.text_field :name%><br>
+        <%= exercise.label :instructions %>
+        <%= exercise.text_area :instructions %><br>
+        <%= exercise.label :muscles, "Target Muscles"%>
+        <%= exercise.text_field :muscles%><br>
+        <%= exercise.label :rep_time, "Estimated time per rep(in seconds)"%>
+        <%= exercise.number_field :rep_time, min: 1%><br><br>
+        <%= exercise.label :reps %>
+        <%= exercise.number_field :reps, min: 1 %>
+      </div>
+      <br><br><br> 
+     
+    <% end %>
+    <%= f.submit %>
+  <%end%>
+</div>
 <script id="new-routine-template" type="text/x-handlebars-template">
   <div class="new_routine">
     <h1>{{name}}</h1> 
-    <p>TARGET: <%=@routine.muscles%></p>
-    {{#exercises exercise}}
-      {{exercisePartial}}
-    {{/exercise}} 
-    <p>Total Estimated Workout Time: <%=show_estimated_time(routine)%></p>
+    <p>TARGET: <%=@routine.muscles%></p> 
+    {{#each exercises}}
+        <div class="new_exercise"> 
+    <h2>{{name}}</h2>
+  <ul>
+    <li>Reps: {{routine_exercises.reps}}</li>
+    <li>Instructions: {{instructions}}</li>
+    <li>Estimated Time: {{rep_time}} * {{routine_exercises.reps}}</li>
+    <li>Target Muscles: {{muscles}}</li>
+  </ul>
+  </div>
+    {{/each}} 
   </div>
 </script>
 
-<script id="exercise-partial" type="text/x-handlebars-template">
+<script id="exercise-partial-template" type="text/x-handlebars-template">
   <div class="new_exercise"> 
     <h2>{{name}}</h2>
   <ul>
