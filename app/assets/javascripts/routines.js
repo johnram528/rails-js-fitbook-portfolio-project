@@ -44,7 +44,14 @@ $(function(){
   })
   $("#user_routines_link").on("click", function(e){
     e.preventDefault()
-    
+    var id = $(this).attr("data-id")
+    $.getJSON("/users/"+ id +"/routines",function(json){
+      var routines = json
+      var routinesTemplate = $("#routines-index-template").html()
+      var template = Handlebars.compile(routinesTemplate)
+
+      $(".container").html(template(routines))  
+    })
   })
   $("#routines_link").on("click", function(e){
     e.preventDefault()
