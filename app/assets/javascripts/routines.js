@@ -8,7 +8,7 @@ function Routine(attributes){
 
 
 
-$(function(){
+$(function(event) {
   Routine.templateSource = $("#new-routine-template").html()
   Routine.template = Handlebars.compile(Routine.templateSource)
 })
@@ -18,7 +18,7 @@ Routine.prototype.renderDetails = function (){
 }
 
 
-$(function(){  
+$( document ).on('turbolinks:load', function() { 
   $("form#new_routine").on("submit", function(e){
 
   e.preventDefault()
@@ -63,9 +63,9 @@ $(function(){
       $(".container").html(template(routines))
     })      
   })
-  $("#new_routine_link").on("click", function(e){
+  $(".container").on("click", "#routine_path_link", function(e){
     e.preventDefault()
-    
+    alert("yes")
   }) 
 })
 

@@ -28,6 +28,7 @@ gem 'pry'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'active_model_serializers'
+gem 'jquery-turbolinks'
 
 
 # Use ActiveModel has_secure_password
