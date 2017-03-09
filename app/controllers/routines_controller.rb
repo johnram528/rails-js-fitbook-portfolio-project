@@ -18,6 +18,8 @@ class RoutinesController < ApplicationController
   def new
     @routine = Routine.new
     5.times { @routine.exercises.build}
+
+    render layout: false
   end
 
   def create

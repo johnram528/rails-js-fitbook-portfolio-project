@@ -73,6 +73,13 @@ $( document ).on('turbolinks:load', function() {
       $(".container").html(routineDetails)
     })         
   }) 
+  $("#new_routine_link").on("click", function(e){
+    e.preventDefault()
+    $.get("/routines/new",function(response){
+
+      $(".container").html(response)
+    })
+    })  
 })
 
 function handleBarsSetup(){
