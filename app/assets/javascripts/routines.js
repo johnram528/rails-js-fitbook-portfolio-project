@@ -65,7 +65,13 @@ $( document ).on('turbolinks:load', function() {
   })
   $(".container").on("click", "#routine_path_link", function(e){
     e.preventDefault()
-    alert("yes")
+    var id = $(this).attr("data-id")
+    $.getJSON("/routines/" + id, function(json){
+      var routine = new Routine(json)
+      var routineDetails = routine.renderDetails()
+      
+      $(".container").html(routineDetails)
+    })         
   }) 
 })
 

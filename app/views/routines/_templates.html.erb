@@ -21,7 +21,7 @@
 <script id="routines-index-template" type="text/x-handlebars-template">
   <div class="routine_index">
     {{#each this}}
-      <h1><a href="#" id="routine_path_link">{{name}} Workout</a></h1> 
+      <h1><a href="#" id="routine_path_link" data-id="{{id}}">{{name}} Workout</a></h1> 
       <p><a href="{{user.url}}">{{user.email}}</a></p>
       <p>TARGET: {{muscles}}</p> 
       {{#each exercises}}
