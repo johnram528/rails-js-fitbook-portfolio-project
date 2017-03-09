@@ -18,7 +18,7 @@ Routine.prototype.renderDetails = function (){
 }
 
 
-$(function(){
+$(function(){  
   $("form#new_routine").on("submit", function(e){
 
   e.preventDefault()
@@ -67,14 +67,6 @@ $(function(){
     e.preventDefault()
     
   }) 
-  $("#profile_link").on("click", function(e){
-    e.preventDefault()
-    
-  })
-  $("#root_link").on("click", function(e){
-    e.preventDefault()
-    
-  })       
 })
 
 function handleBarsSetup(){
