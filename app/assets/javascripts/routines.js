@@ -19,7 +19,7 @@ Routine.prototype.renderDetails = function (){
 
 
 $( document ).on('turbolinks:load', function() { 
-  $("form#new_routine").on("submit", function(e){
+  $(".container").on("submit","form#new_routine", function(e){
 
   e.preventDefault()
   var $form = $(this)
@@ -82,6 +82,6 @@ $( document ).on('turbolinks:load', function() {
     })  
 })
 
-function handleBarsSetup(){
-  Handlebars.registerPartial(exercisePartial, $("#exercise-partial").html())
-}
+// function handleBarsSetup(){
+//   Handlebars.registerPartial(exercisePartial, $("#exercise-partial").html())
+// }
