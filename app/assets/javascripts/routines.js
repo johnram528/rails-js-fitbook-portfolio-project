@@ -17,8 +17,7 @@ Routine.prototype.renderDetails = function (){
   return Routine.template(this)
 }
 
-
-$( document ).on('turbolinks:load', function() { 
+function submitForm(){
   $(".container").on("submit","form#new_routine", function(e){
 
   e.preventDefault()
@@ -42,6 +41,11 @@ $( document ).on('turbolinks:load', function() {
     console.log(response)
   })
   })
+}
+
+
+$( document ).on('turbolinks:load', function() { 
+  submitForm()
   $("#user_routines_link").on("click", function(e){
     e.preventDefault()
     var id = $(this).attr("data-id")
