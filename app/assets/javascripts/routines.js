@@ -43,9 +43,7 @@ function submitForm(){
   })
 }
 
-
-$( document ).on('turbolinks:load', function() { 
-  submitForm()
+function clickUserRoutineIndex(){
   $("#user_routines_link").on("click", function(e){
     e.preventDefault()
     var id = $(this).attr("data-id")
@@ -57,6 +55,11 @@ $( document ).on('turbolinks:load', function() {
       $(".container").html(template(routines))  
     })
   })
+}
+
+$( document ).on('turbolinks:load', function() { 
+  submitForm()
+  clickUserRoutineIndex()
   $("#routines_link").on("click", function(e){
     e.preventDefault()
     $.getJSON("/routines",function(json){
