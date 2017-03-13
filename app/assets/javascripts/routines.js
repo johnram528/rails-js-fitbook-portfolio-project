@@ -57,9 +57,7 @@ function clickUserRoutineIndex(){
   })
 }
 
-$( document ).on('turbolinks:load', function() { 
-  submitForm()
-  clickUserRoutineIndex()
+function clickRoutineIndex(){
   $("#routines_link").on("click", function(e){
     e.preventDefault()
     $.getJSON("/routines",function(json){
@@ -70,7 +68,10 @@ $( document ).on('turbolinks:load', function() {
       $(".container").html(template(routines))
     })      
   })
-  $(".container").on("click", "#routine_path_link", function(e){
+}
+
+function clickUserPath(){
+$(".container").on("click", "#routine_path_link", function(e){
     e.preventDefault()
     var id = $(this).attr("data-id")
     $.getJSON("/routines/" + id, function(json){
@@ -80,6 +81,13 @@ $( document ).on('turbolinks:load', function() {
       $(".container").html(routineDetails)
     })         
   }) 
+}
+
+$( document ).on('turbolinks:load', function() { 
+  submitForm()
+  clickUserRoutineIndex()
+  clickRoutineIndex()
+  clickUserPath()
   $("#new_routine_link").on("click", function(e){
     e.preventDefault()
     $.get("/routines/new",function(response){
